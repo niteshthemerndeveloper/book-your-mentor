@@ -25,6 +25,7 @@
   -- Passwords do not match
   -- User Already Exist
 
-_I hope you won't face any issues in near future with this code_
+_I hope you I am able to fulfill your project requirements with this code_
+
 Best Regards,
 Nitesh

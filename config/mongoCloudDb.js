@@ -9,7 +9,6 @@ const { mongoDBURISecretKey } = configVars;
 const connectCloudMongoDB = async () => {
   try {
     await mongoose.connect(mongoDBURISecretKey);
-    console.log('MongoDB Connected...');
   } catch (err) {
     console.log(err.message);
     // Exit Process with failure;
