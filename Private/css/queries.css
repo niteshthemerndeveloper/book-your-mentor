@@ -1,0 +1,184 @@
+/* Note: 1em is equal to 16px does not depend on html font-size in media queries */
+
+/* =========== BELOW 1136px (Smaller desktops) =========== */
+@media screen and (max-width: 72em){
+  html{
+    /* 9px / 16px  */
+    font-size: 56.25%;
+  }
+
+  .grid{
+    column-gap: 3.2rem;
+    row-gap: 6.4rem;
+  }
+}
+
+/* =========== BELOW 944px (Tablets) =========== */
+@media screen and (max-width: 59em){
+  html{
+    /* 8px / 16px  */
+    font-size: 50%;
+  }
+
+  .feature__icon{
+    font-size: 4.8rem;
+  }
+}
+
+/* =========== Mobile Navigation Below 784px (Mobile Devices) =========== */
+@media screen and (max-width: 49em) {
+
+  .grid{
+    gap: 4.8rem;
+  }
+
+  .grid-2-cols{
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .grid-3-cols,
+  .grid-4-cols {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .margin-bottom-lg {
+    margin-bottom: 4.8rem !important;
+}
+
+.section__space{
+  padding: 4.8rem 0;
+}
+
+.section__service,
+.section__testimonial{
+  margin-bottom: 4.8rem !important;
+}
+
+.section__space.section__place{
+  padding: 0;
+}
+
+  /* show mobile navigation Buttons*/
+  .navbar__menu-btns{
+    display: block;
+    z-index: 9999;
+  }
+
+  .navbar__menu{
+    align-items: center;
+    background-color: #2972e2;
+    background-color: #eaf1fc;
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    right: 0;
+    overflow: hidden;
+    opacity: 0;
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    transition: all 500ms ease-in;
+    transform: translateX(100%);
+    visibility: hidden;
+    -webkit-backdrop-filter: blur(5px);
+    width: 100%;
+    z-index: 9998;
+  }
+  
+  .menu__open .navbar__menu{
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateX(0);
+  }
+
+  .menu__open .navbar__menu-times{
+    display: block;
+  }
+
+  .menu__open .navbar__menu-bars{
+    display: none;
+  }
+
+.navbar__list{
+    flex-direction: column;
+    gap: 4.8rem;
+    justify-content: center;
+  }
+
+.navbar__list-group{
+    flex-direction: column;
+    gap: 4.8rem;
+    justify-content: center;
+  }
+
+  .navbar__link:link,
+  .navbar__link:visited{
+    font-size: 2.4rem;
+  }
+
+  .services__container{
+    width: 60%;
+    margin: 0 auto;
+  }
+
+  .services__list{
+    margin-left: 0;
+  }
+
+  .bookNow__container{
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  .bookNow__content{
+    padding: 4.8rem;
+  }
+}
+
+/* =========== MOBILE TERRITORY Below 600px (Mobile Devices) =========== */
+@media screen and (max-width: 37.5em) {
+  .grid-2-cols,
+  .grid-3-cols,
+  .grid-4-cols, 
+  .hero__container {
+    grid-template-columns: 1fr;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  .hero__content{
+    margin-top: 3.2rem;
+    text-align: center;
+    grid-row: 1;
+  }
+
+  .services__container{
+    width: 90%;
+  }
+
+  .bookNow__container{
+    width: 90%;
+  }
+
+  .reviews__content{
+    text-align: center;
+  }
+
+  .footer__grid{
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .footer__company-info{
+    align-items: flex-start;
+  }
+
+  .footer__logo{
+    height: 12rem;
+  }
+  
+  .footer__logo-img{
+    margin-bottom: 10.8rem;
+  }
+}

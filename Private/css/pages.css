@@ -1,0 +1,372 @@
+/* =========== CTA FORM STYLES =========== */
+
+.section__pricing {
+  align-items: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../img/window-cleaning.jpg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  font-family: 'Work Sans', sans-serif;
+  /* height: 100vh; */
+  justify-content: center;
+  padding: 6.4rem 0 9.6rem 0;
+}
+
+.cta__form {
+  background: #fff;
+  border-radius: 9px;
+  font-weight: 400;
+  margin: 0.8rem auto;
+  position: relative;
+  width: 60rem;
+  height: 62rem;
+  overflow: hidden;
+}
+
+.fieldset__container{
+  display: flex;
+  height: 56rem;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+  /* overflow: hidden; */
+}
+
+.fieldset__card{
+  border: none;
+  display: none;
+  height: 100%;
+  width: 90%;
+  margin: 3.6rem auto;
+  position: absolute;
+  top: 0;
+  transition: all 600ms;
+  z-index: 1;
+}
+
+.active.fieldset__card{
+  display: block;
+  transition: display 600ms ease-in-out;
+}
+
+.cta__form label {
+  display: block;
+  color: #002970;
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-top: 1.8rem;
+}
+
+.cta__form input, .input__field{
+  background-color: transparent;
+  border-radius: 0.6rem;
+  border: none;
+  border: 1px solid #667fa980;
+  color: #002970;
+  font-size: 1.8rem;
+  font-family: inherit;
+  margin: 1.2rem 0rem 1.2rem;
+  outline: none;
+  padding: 1.2rem 0.8rem;
+  width: 85%;
+}
+
+.cta__form input::placeholder, 
+.cta__form .input__field::-webkit-input-placeholder {
+  color: rgba(0, 41, 112, 0.5);
+}
+
+/* SLIDE-IN INPUT STYLES */
+.input__row{
+  display: inline-block;
+  position: relative;
+  width: 100%;
+}
+
+.cta__form .input__field{
+  transition: all 300ms ease-in-out;
+}
+
+.input__field + label{
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+  background: #2972e2;
+  color: #fff;
+  display: inline-block;
+  position: absolute;
+  top: -6px;
+  right: 0;
+  padding: 1.25rem 0.8rem;
+  transform: translate(0%, 0%);
+}
+
+.btn__box{
+  position: absolute;
+  margin: 3.2rem auto;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  width: 90%;
+  bottom: 0rem;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  z-index: 1;
+}
+
+.cta__form button{
+  margin: 0 1.2rem;
+  background: #2972e2;
+  border: 0;
+  border-radius: 6px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1.8rem;
+  font-weight: 500;
+  letter-spacing: 0.9px;
+  outline: none;
+  opacity: 1;
+  padding: 1.2rem 2.4rem;
+  transition: all 0.3s;
+}
+
+.cta__form .payment__btn{
+  background: #047857;
+}
+
+.cta__form button:hover{
+  opacity: 0.9;
+}
+
+.cta__form *:focus{
+  outline: none;
+  box-shadow: 0 0 0 0.4rem rgba(41, 115, 226, 0.5);
+}
+
+.step__row{
+  align-items: center;
+  box-shadow: 0 -0.1rem 0.4rem -0.1rem #000;
+  height: 4rem;
+  display: flex;
+  margin: 0 auto;
+  position: relative;
+  width: 60rem;
+}
+
+.step__col{
+  color: #002970;
+  font-size: 1.8rem;
+  position: relative;
+  text-align: center;
+  width: 33.33%;
+}
+
+.active.step__col{
+  color: #fff;
+}
+
+#stepProgress{
+  background: linear-gradient(to right, #2972e2, #14b8a6);
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  transition: all 600ms;
+}
+
+#stepProgress::after{
+  border-top: 2rem solid transparent;
+  border-bottom: 2rem solid transparent;
+  border-left: 2rem solid #2972e2;
+  content: '';
+  height: 0;
+  position: absolute;
+  right: -2rem;
+  top: 0;
+  width: 0;
+}
+
+/* ADDITIONAL SERVICES */
+.services__grid{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3.2rem;
+  justify-items: center;
+  margin-top: 1.2rem;
+  width: 70%;
+}
+
+.additional__card,
+.power__card{
+  cursor: pointer;
+  border: 2px solid #d4e3f9;
+  padding: 0.8rem 1.6rem;
+  text-align: center;
+  width: 16rem;
+}
+
+.selected.additional__card,
+.selected.power__card{
+  border: 2px solid #2972e2;
+}
+
+.error.additional__card,
+.error.power__card{
+  border: 2px solid rgb(238, 53, 53);
+}
+
+.additional__img{
+  max-width: 30%;
+}
+
+.additional__text,
+.power__text{
+  font-size: 1.6rem;
+  line-height: 1.4;
+  margin-top: 0.8rem;
+}
+
+.total__content{
+  align-items: center;
+  display: grid;
+  grid-template-columns: 80fr 20fr;
+  grid-template-rows: -1.2rem;
+  gap: 0rem;
+  justify-items: flex-start;
+  width: 90%;
+  margin: 1.2rem auto 1.2rem;
+  padding: 0rem 0.8rem;
+}
+
+.total__text{
+  color: #002970;
+  font-size: 1.6rem;
+}
+
+.total__text:nth-child(even){
+  justify-self: end;
+}
+
+.payment__message.total__text{
+  margin-top: 0.4rem;
+  color: #047857;
+}
+
+.total__card{
+  border-top: 2px solid #000;
+  margin-top: 1.6rem;
+  padding-top: 0.8rem;
+}
+
+.total__amount{
+  font-size: 2.4rem;
+}
+
+.solar__panels,
+.power__cleaning{
+  display: none;
+}
+
+.show.solar__panels,
+.show.power__cleaning{
+  display: block;
+}
+
+/* =========== CTA FORM BELOW 684px (Mobile Devices) =========== */
+@media screen and (max-width: 42em) {
+  .cta__form{
+    height: 64rem;
+    width: 54rem;
+  }
+
+  .fieldset__card{
+    margin: 3.2rem auto;
+    max-width: 80%;
+  }
+
+  .cta__form input, .input__field{
+    width: 75%;
+  }
+
+  .input__field + label{
+    right: 3.2rem;
+  }
+
+  .btn__box{
+    margin: 0 auto;
+  }
+
+  .step__row{
+    width: 100%;
+  }
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+/* =========== ABOUT US PAGE =========== */
+
+.whyUs__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 4.8rem;
+  margin-left: 4.8rem;
+}
+
+/* =========== Failure PAGE =========== */
+.failure__container{
+  padding: 20rem;
+}
+
+.success__container{
+  padding: 20rem;
+}
+
+
+/* =========== TERMS & PRIVACY PAGE =========== */
+.section__terms{
+  color: var(--text-color);
+}
+.terms__subheading{
+  color: #2567cb;
+  display: block;
+  font-size: 2.4rem;
+  font-weight: 500;
+  letter-spacing: 0.75px;
+  margin-bottom: 1.6rem;
+  text-transform: uppercase;
+}
+
+.terms__date{
+  display: block;
+  font-size: 1.8rem;
+  font-weight: 500;
+  letter-spacing: 0.75px;
+  margin-bottom: 1.6rem;
+  text-transform: uppercase;
+}
+
+.terms__text{
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.6;
+  margin-bottom: 1.6rem;
+}
+
+.list__title{
+  display: block;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1.02;
+  margin-bottom: 1.6rem;
+}
